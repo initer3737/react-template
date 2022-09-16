@@ -6,10 +6,12 @@ type props={
    alt:string
 }
 
-export const Image:React.FC<props>=({src,className,alt})=>{
+const Image:React.FC<props>=({src,className,alt})=>{
  return (
     <>
          <img src={src} className={className} alt={alt}/>
     </>
  )
 }
+
+export default Image;

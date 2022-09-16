@@ -1,0 +1,38 @@
+*{
+    cursor:url('../../../assets/images/Hand.ani');
+}
+.gif-wrapper{
+    opacity:0.9;
+    filter: brightness(92%);
+    filter: saturate(90%);
+    filter: sephia(70%);
+    background-size:cover;
+    background-attachment: fixed;
+}
+.form-login{
+    justify-content: center
+}
+.bg{
+    display: flex;
+    justify-items: end;
+    flex-direction: row-reverse;
+}
+.bg { 
+    width: 100vw;
+    height: 100vh;
+    background: url(../../../assets/images/register.gif) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity:0.9;
+    filter: brightness(92%);
+    filter: saturate(90%);
+    filter: sephia(70%);
+  }
+
+.filter{
+    background-color: black;
+    opacity: 0.7;
+    position: relative;
+}
