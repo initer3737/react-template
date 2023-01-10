@@ -3,24 +3,28 @@ import React from "react";
         variant:string,
         name:string,
         onClick:any,
-        disableOnClick:boolean
+        disableOnClick:boolean,
+        children:any,
+        allAttr:object
     }
 export default function Button(props:props) {
-        const {variant,name,onClick,disableOnClick} =props;
+        const {variant,name,onClick,disableOnClick,children,allAttr} =props;
         let condition;
     switch (disableOnClick ) {
         case true:
-            condition=<button 
-                className={`btn btn-${variant}`} 
-                >{name}
+            condition=<button
+                {...allAttr}
+                className={`btn btn-${variant}`}>
+                    {children}{` ${name}`}
                 </button>
             break;
     
         default:
           condition=<button 
+                {...allAttr}
                 className={`btn btn-${variant}`} 
-                onClick={onClick}
-                >{name}
+                onClick={onClick}>
+                   {children}{` ${name}`}
             </button>
     }
     

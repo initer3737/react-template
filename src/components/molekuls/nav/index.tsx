@@ -7,8 +7,8 @@ export default function Nav() {
         const {pathname}=location;
         const splitLokasi=pathname.split('/');
   return (
-    <nav className="bg-4" id='nav'>
-       <div className="mx-4 d-flex gap-3 px-2 py-4 flex-wrap">
+    <nav className="text-light" id='nav'>
+       <div className="bg-4 d-flex gap-3 px-3 py-5 mb-2 flex-wrap">
             <Link 
                 target={""}
                 variant={`${splitLokasi[1]===''?'light':'info'}`}
@@ -17,38 +17,6 @@ export default function Nav() {
                 isIcon={true} 
                 icon={"house-fill"}    
                 />
-            <Link
-                target={''} 
-                variant={`${splitLokasi[1]==='about'?'light':'info'}`} 
-                name={'about'} 
-                href="/about" 
-                isIcon={true} 
-                icon={"alexa"}    
-                />
-            <Link 
-                target={''}
-                variant={`${splitLokasi[1]==='quotes'?'light':'info'}`} 
-                name={'言葉'} 
-                href="/quotes" 
-                isIcon={true} 
-                icon={"chat-text"}    
-                />
-            <Link 
-                target={''}
-                variant={`${splitLokasi[1]==='lyrics'?'light':'info'}`} 
-                name={'songs'} 
-                href="/lyrics" 
-                isIcon={true} 
-                icon={"file-music-fill"}    
-                /> 
-            <Link 
-                target={''}
-                variant={`${splitLokasi[1]==='anime'?'light':'info'}`} 
-                name={'anime'} 
-                href="/anime" 
-                isIcon={true} 
-                icon={"film"}    
-                /> 
         </div>         
     </nav>
   )

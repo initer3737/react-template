@@ -1,0 +1,34 @@
+body{
+    /* overflow-x: hidden; */
+}
+/*color pallete*/
+.color-1{
+    color:#DFF6FF;
+}
+.bg-1{
+    background-color:#DFF6FF;
+}
+
+.color-2{
+    color:#47B5FF;
+}
+.bg-2{
+    background-color:#47B5FF;
+}
+
+.color-3{
+    color:#1363DF;
+}
+.bg-3{
+    background-color:#1363DF;
+}
+
+.color-4{
+    color:#06283D;
+}
+.bg-4{
+    background-color:#06283D;
+}
+.bg-firefork{
+    background-color: #c9d6f3;
+}
