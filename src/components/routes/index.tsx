@@ -2,8 +2,7 @@ import React  from "react";
     import {
         Routes as Switch, // similiar to switch
         Route ,
-        Navigate,
-        // useLocation
+        Navigate
         } from 'react-router-dom'
     import {
         NotFound,
@@ -22,10 +21,10 @@ export default function Routes(){
     //     const path=pathname.split('/');
 
      return (
-        <>
-                <ScrollToTop/>
-                 <Nav/>
-                 <Header/> 
+        < div className="d-flex flex-column">
+                    <ScrollToTop/>
+                    <Nav/>
+                    <Header/> 
                     <Switch>
                         <Route path="/" element={<HomePage />} />
                         <Route path="/404" element={<NotFound/>} />
@@ -33,6 +32,6 @@ export default function Routes(){
                     </Switch>
                     
                 <Footer/>
-        </>
+        </div>
      )
 }

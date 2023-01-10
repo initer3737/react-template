@@ -7,7 +7,7 @@ export default function Nav() {
         const {pathname}=location;
         const splitLokasi=pathname.split('/');
   return (
-    <nav className="text-light" id='nav'>
+    <nav className="text-light row" id='nav'>
        <div className="bg-4 d-flex gap-3 px-3 py-5 mb-2 flex-wrap">
             <Link 
                 target={""}
