@@ -1,7 +1,11 @@
 import React from 'react'
 import { LinkToPage,Icon} from '../../atom'
+import { useRecoilState ,useRecoilValue} from 'recoil'
+import { counterAtom, getCounterAtomVal } from '../../services/recoil'
 export default function HomePage()
  {
+   const getCounterAtomValRecoilValue=useRecoilValue(getCounterAtomVal);
+   const [counterAtomValRecoilState , setCounterAtomValRecoilState]=useRecoilState(counterAtom);
   return (
      <>
       <div className="row px-3 bg-4 text-light">
@@ -37,8 +41,28 @@ export default function HomePage()
             <div className="d-inline">
                <LinkToPage href={'https://colorhunt.co/'} icon={'stars'} target={'_blank'} variant={'light'} name={'color hunt'} className={'fs-4 text-center'} />
             </div>
+            <div className="d-inline">
+               <LinkToPage href={'https://recoiljs.org/docs/introduction/getting-started'} icon={'stars'} target={'_blank'} variant={'light'} name={'recoil'} className={'fs-4 text-center'} />
+            </div>
          </div>
       </div>
+           <div className="d-flex p-3 bg-4 my-3 text-light">
+            <div className="d-flex gap-3 flex-column mx-auto">
+               <p className="fs-4">
+                  <Icon variant={'light fs-3'} icon={'flower3'} name={''} /> 
+                  recoil example
+               </p>
+                 <div className="d-flex flex-column gap-2">
+                  {getCounterAtomValRecoilValue}
+                     <button onClick={()=>setCounterAtomValRecoilState(val=>val+1)}
+                        className="btn btn-outline-info rounded-md shadow py-3 px-2"
+                     >
+                        <Icon variant={'light'} icon={'layout-wtf'} name={' '} />
+                        counter app
+                     </button>
+                 </div>
+               </div>
+           </div>
      </>
   )
 }
