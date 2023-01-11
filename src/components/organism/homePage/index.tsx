@@ -2,6 +2,7 @@ import React from 'react'
 import { LinkToPage,Icon} from '../../atom'
 import { useRecoilState ,useRecoilValue} from 'recoil'
 import { counterAtom, getCounterAtomVal } from '../../services/recoil'
+import Cookie from '../../services/cookie';
 export default function HomePage()
  {
    const getCounterAtomValRecoilValue=useRecoilValue(getCounterAtomVal);
@@ -44,6 +45,9 @@ export default function HomePage()
             <div className="d-inline">
                <LinkToPage href={'https://recoiljs.org/docs/introduction/getting-started'} icon={'stars'} target={'_blank'} variant={'light'} name={'recoil'} className={'fs-4 text-center'} />
             </div>
+            <div className="d-inline">
+               <LinkToPage href={'https://github.com/js-cookie/js-cookie'} icon={'stars'} target={'_blank'} variant={'light'} name={'cookie js'} className={'fs-4 text-center'} />
+            </div>
          </div>
       </div>
            <div className="d-flex p-3 bg-4 my-3 text-light">
@@ -61,6 +65,15 @@ export default function HomePage()
                         counter app
                      </button>
                  </div>
+               </div>
+           </div>
+           <div className="d-flex p-3 bg-4 my-3 text-light">
+            <div className="d-flex gap-3 flex-column mx-auto">
+               <p className="fs-4">
+                  <Icon variant={'light fs-3'} icon={'flower3'} name={''} /> 
+                  cookie example
+               </p>
+                 <Cookie/>
                </div>
            </div>
      </>
